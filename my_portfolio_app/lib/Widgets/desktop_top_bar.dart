@@ -29,7 +29,7 @@ class _DesktopTopBarState extends State<DesktopTopBar> {
               fontWeight: FontWeight.bold 
             ),
           ),
-          SizedBox(width: size*0.001,),
+          SizedBox(width: size*0.010,),
 
 
           TextButton(
@@ -82,15 +82,31 @@ class _DesktopTopBarState extends State<DesktopTopBar> {
             ),
           ),
 
-          ElevatedButton(
-            onPressed: (){},
-            style: ElevatedButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(50)
+          Container(
+            height: MediaQuery.of(context).size.height*0.05,
+            width: MediaQuery.of(context).size.width*0.08,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),
+              gradient: const LinearGradient(
+                colors: [
+                  Color(0xff2Ac9d7),
+                  Color(0xffD247f7),   
+                ]
               )
             ),
-            child: const Text("Resume"),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.transparent,
+                shadowColor: Colors.transparent
+              ),
+              onPressed: (){},
+              child: Center(
+                child: Text("RESUME", style: GoogleFonts.lato(color: Colors.white, fontSize: MediaQuery.of(context).size.width*0.01),),
+              ),
+            ),
           )
+
+          
         ],
       ),
     );
