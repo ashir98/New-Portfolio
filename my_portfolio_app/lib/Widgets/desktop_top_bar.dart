@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_portfolio_app/Responsive/Desktop/about.dart';
+import 'package:my_portfolio_app/home.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:http/http.dart' as http;
 
 class DesktopTopBar extends StatefulWidget {
   const DesktopTopBar({super.key});
@@ -32,26 +36,12 @@ class _DesktopTopBarState extends State<DesktopTopBar> {
           SizedBox(width: size*0.010,),
 
 
-          TextButton(
-            onPressed: (){},
-            child: GradientText(
-            "Home",
-            colors: const [
-              Color(0xff2Ac9d7),
-              Color(0xffD247f7),          
-            ],
-            style: GoogleFonts.lato(
-              fontSize: size*0.015,
-              fontWeight: FontWeight.bold,
-              color:const Color(0xff2Ac9d7)
-            ),
-          ),
-          ),
+          
 
           
 
           TextButton(
-            onPressed: (){},
+            onPressed:() => Navigator.push(context, MaterialPageRoute(builder: (context)=>About())),
             child: GradientText(
               "About",
               colors: const [
@@ -99,7 +89,13 @@ class _DesktopTopBarState extends State<DesktopTopBar> {
                 backgroundColor: Colors.transparent,
                 shadowColor: Colors.transparent
               ),
-              onPressed: (){},
+              onPressed:()async {
+                await launchUrl(
+                  Uri.parse("https://docs.google.com/document/d/17s0XbYiNRMpVw8cdx7cWZECVQxw1BQl7/edit?usp=sharing&ouid=101900076162085562703&rtpof=true&sd=true"),
+                  mode: LaunchMode.externalNonBrowserApplication
+                  );
+                
+              },
               child: Center(
                 child: Text("RESUME", style: GoogleFonts.lato(color: Colors.white, fontSize: MediaQuery.of(context).size.width*0.01),),
               ),

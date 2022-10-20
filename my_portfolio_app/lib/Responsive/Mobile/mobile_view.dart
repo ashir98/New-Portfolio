@@ -42,31 +42,10 @@ class _MobileViewState extends State<MobileView> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Padding(
-                      padding: EdgeInsets.symmetric(vertical: 4.h, horizontal: 2.h),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Hi, my name is",style: GoogleFonts.lato(
-                            fontSize: 3.h,
-                            color: Colors.white
-                          ),),
-                          SizedBox(height: 1.h,),
-                          GradientText(
-                            "Syed Ashir Ali",
-                            colors: const [
-                              Color(0xff2Ac9d7),
-                              Color(0xffD247f7),
-                            ],
-                            style: GoogleFonts.lato(fontSize: 6.5.h, fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(height:1.h),
-                          Text("I build things for App and Web.", style: GoogleFonts.lato(fontSize: 3.h, fontWeight: FontWeight.bold, color: Colors.white),)
-                        ],
-                      ),
+                    SizedBox(
+                      height: 3.h,
                     ),
-                    SizedBox(height: 2.h,),
-              
+
                     Center(
                       child: Container(
                         
@@ -93,9 +72,31 @@ class _MobileViewState extends State<MobileView> {
                         ),
                       ),
                     ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 4.h, horizontal: 2.h),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          
+                          Text("Hi, my name is",style: GoogleFonts.lato(
+                            fontSize: 3.h,
+                            color: Colors.white
+                          ),),
+                          SizedBox(height: 1.h,),
+                          GradientText(
+                            "Syed Ashir Ali",
+                            colors: const [
+                              Color(0xff2Ac9d7),
+                              Color(0xffD247f7),
+                            ],
+                            style: GoogleFonts.lato(fontSize: 6.5.h, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(height:1.h),
+                          Text("I build things for App and Web.", style: GoogleFonts.lato(fontSize: 3.h, fontWeight: FontWeight.bold, color: Colors.white),)
+                        ],
+                      ),
+                    ),
                     SizedBox(height: 2.h,),
-
-
                     BulletText(text: "App developer",),
                     BulletText(text: "Flutter Enthusiast"),
                     BulletText(text: "Computer Science Student"),
@@ -129,20 +130,11 @@ class _MobileViewState extends State<MobileView> {
                       color: Colors.black,
                     )
                       ],
-                    )
+                    ),
 
 
                     
 
-
-
-                    
-
-                    
-              
-              
-                    
-                    
                   ],
                 ),
               ),

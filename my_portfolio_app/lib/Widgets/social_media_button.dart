@@ -17,11 +17,17 @@ class SocialButton extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: color
+          color: color,
         ),
         height: MediaQuery.of(context).size.height*0.06,
         width: MediaQuery.of(context).size.width*0.055,
-        child: Icon(icon, color: Colors.white,size: MediaQuery.of(context).size.width*0.02,),
+        child: IconButton(
+          style: IconButton.styleFrom(
+            shadowColor: Colors.transparent
+          ),
+          onPressed:(){},
+          icon: Icon(icon,  color: Colors.white,size: MediaQuery.of(context).size.width*0.02,),
+        ),
       ),
     );
   }
