@@ -25,7 +25,6 @@ class _DesktopViewState extends State<DesktopView>
   late AnimationController _animationController;
 
   List pages = [
-    DeskHomePage(),
     About(),
   ];
 
