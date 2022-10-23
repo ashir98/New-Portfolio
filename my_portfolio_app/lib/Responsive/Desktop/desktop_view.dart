@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio_app/Responsive/Desktop/about.dart';
+import 'package:my_portfolio_app/Responsive/Desktop/footer.dart';
 import 'package:my_portfolio_app/Responsive/Desktop/home_page.dart';
+import 'package:my_portfolio_app/Responsive/Desktop/projects.dart';
 import 'package:my_portfolio_app/Widgets/appBar.dart';
 import 'package:my_portfolio_app/Widgets/buletted_text.dart';
 import 'package:my_portfolio_app/Widgets/desktop_top_bar.dart';
@@ -25,7 +27,10 @@ class _DesktopViewState extends State<DesktopView>
   late AnimationController _animationController;
 
   List pages = [
+    DeskHomePage(),    
     About(),
+    Projects(),
+    Footer()
   ];
 
 
@@ -72,117 +77,3 @@ class _DesktopViewState extends State<DesktopView>
 }
 
 
-
-// SingleChildScrollView(
-//               ///MAIN COLUMN OF THE WEBPAGE
-//               child: Column(
-                
-//                 children: [
-//                   ///TOPBAR OF THE WEBPAGE
-//                   Padding(
-//                     padding: EdgeInsets.symmetric(vertical: size * 0.05),
-//                     child: Row(
-//                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-//                       children: [
-//                         ///NAME AND ABOUT COLUMN
-//                         Column(
-//                           crossAxisAlignment: CrossAxisAlignment.start,
-//                           children: [
-//                             Text(
-//                               "Hi, my name is",
-//                               style: GoogleFonts.lato(
-//                                   fontSize: size * 0.02,
-//                                   color: Colors.white,
-//                                   fontWeight: FontWeight.bold),
-//                             ),
-//                             GradientText(
-//                               "Syed Ashir Ali",
-//                               colors: const [
-//                                 Color(0xff2Ac9d7),
-//                                 Color(0xffD247f7),
-//                               ],
-//                               style: GoogleFonts.lato(fontSize: size * 0.050),
-//                             ),
-//                             Text(
-//                               "I build things for App and Web.",
-//                               style: GoogleFonts.lato(
-//                                   fontSize: size * 0.03,
-//                                   fontWeight: FontWeight.bold),
-//                             ),
-//                             SizedBox(
-//                               height: size * 0.02,
-//                             ),
-//                             Column(
-//                               crossAxisAlignment: CrossAxisAlignment.start,
-//                               children: [
-//                                 BulletedText(text: "App Developer"),
-//                                 BulletedText(text: "Flutter Enthusiast"),
-//                                 BulletedText(text: "Computer Science Student")
-//                               ],
-//                             ),
-//                             Padding(
-//                               padding: const EdgeInsets.symmetric(vertical: 20),
-//                               child: Row(
-//                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//                                 children: [
-//                                   SocialButton(
-//                                       icon: FontAwesomeIcons.facebook,
-//                                       color: const Color(0xff3b5998)),
-//                                   SocialButton(
-//                                       icon: FontAwesomeIcons.whatsapp,
-//                                       color: const Color(0xff25D366),
-//                                   ),
-//                                   SocialButton(
-//                                       icon: FontAwesomeIcons.linkedinIn,
-//                                       color: const Color(0xff0072b1),
-//                                   ) ,    
-//                                   SocialButton(
-//                                       icon: FontAwesomeIcons.youtube,
-//                                       color: Colors.red),
-                                        
-//                                   SocialButton(
-//                                       icon: FontAwesomeIcons.github,
-//                                       color: Colors.black),
-                                   
-//                                 ],
-//                               ),
-//                             )
-//                           ],
-//                         ),
-
-//                         ///CIRCULAR AVATAR PICTURE
-//                         Container(
-//                           decoration: const BoxDecoration(
-//                             boxShadow: [
-//                               BoxShadow(
-//                                   color: Color(0xffD247f7),
-//                                   spreadRadius: 1,
-//                                   blurRadius: 10,
-//                                   offset: Offset(10, 0)),
-//                               BoxShadow(
-//                                   color: Color(0xff2Ac9d7),
-//                                   spreadRadius: 1,
-//                                   blurRadius: 10,
-//                                   offset: Offset(-10, 0)),
-//                             ],
-//                             shape: BoxShape.circle,
-//                           ),
-//                           height: size * 0.25,
-//                           width: size * 0.25,
-//                           child: Padding(
-//                             padding: const EdgeInsets.all(8.0),
-//                             child: CircleAvatar(
-//                               radius: size * 0.09,
-//                               backgroundImage:  const AssetImage("images/1.jpg"),
-//                             ),
-//                           ),
-//                         )
-//                       ],
-//                     ),
-//                   ),
-
-//                 ],
-
-
-//               ),
-//             ),

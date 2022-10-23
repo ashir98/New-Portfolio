@@ -60,7 +60,9 @@ class CustomAppBar extends StatelessWidget {
         ),
         SizedBox(width: size*0.05,),
         TextButton(
-          onPressed:() =>itemScrollController.scrollTo(index: 2, duration: Duration(milliseconds: 500)),
+          onPressed:() =>itemScrollController.scrollTo(
+            index: 2, duration: Duration(milliseconds: 500),
+            ),
           child: GradientText(
             "Projects",
             colors: const [
@@ -74,35 +76,37 @@ class CustomAppBar extends StatelessWidget {
           ),
         ),
         SizedBox(width: size*0.02,),
-         Container(
-            height: MediaQuery.of(context).size.height*0.02,
-            width: MediaQuery.of(context).size.width*0.08,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              gradient: const LinearGradient(
-                colors: [
-                  Color(0xff2Ac9d7),
-                  Color(0xffD247f7),   
-                ]
-              )
-            ),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.transparent,
-                shadowColor: Colors.transparent
+         Center(
+           child: Container(
+              height: MediaQuery.of(context).size.height*0.06,
+              width: MediaQuery.of(context).size.width*0.08,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                gradient: const LinearGradient(
+                  colors: [
+                    Color(0xff2Ac9d7),
+                    Color(0xffD247f7),   
+                  ]
+                )
               ),
-              onPressed:()async {
-                await launchUrl(
-                  Uri.parse("https://docs.google.com/document/d/17s0XbYiNRMpVw8cdx7cWZECVQxw1BQl7/edit?usp=sharing&ouid=101900076162085562703&rtpof=true&sd=true"),
-                  mode: LaunchMode.externalNonBrowserApplication
-                  );
-                
-              },
-              child: Center(
-                child: Text("RESUME", style: GoogleFonts.lato(color: Colors.white, fontSize: MediaQuery.of(context).size.width*0.01),),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.transparent,
+                  shadowColor: Colors.transparent
+                ),
+                onPressed:()async {
+                  await launchUrl(
+                    Uri.parse("https://docs.google.com/document/d/17s0XbYiNRMpVw8cdx7cWZECVQxw1BQl7/edit?usp=sharing&ouid=101900076162085562703&rtpof=true&sd=true"),
+                    mode: LaunchMode.externalNonBrowserApplication
+                    );
+                  
+                },
+                child: Center(
+                  child: Text("RESUME", style: GoogleFonts.lato(color: Colors.white, fontSize: MediaQuery.of(context).size.width*0.01),),
+                ),
               ),
             ),
-          )
+         )
 
       ],
     );
