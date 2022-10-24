@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_portfolio_app/Responsive/Desktop/about.dart';
-import 'package:my_portfolio_app/home.dart';
+import 'package:my_portfolio_app/Responsive/Desktop/d_about.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:http/http.dart' as http;
 
 class DesktopTopBar extends StatefulWidget {
   const DesktopTopBar({super.key});
@@ -41,7 +39,7 @@ class _DesktopTopBarState extends State<DesktopTopBar> {
           
 
           TextButton(
-            onPressed:() => Navigator.push(context, MaterialPageRoute(builder: (context)=>About())),
+            onPressed:() => Navigator.push(context, MaterialPageRoute(builder: (context)=>const About())),
             child: GradientText(
               "About",
               colors: const [

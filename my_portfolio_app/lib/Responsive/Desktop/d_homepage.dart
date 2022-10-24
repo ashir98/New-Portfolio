@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio_app/Widgets/buletted_text.dart';
@@ -18,12 +16,12 @@ class DeskHomePage extends StatefulWidget {
 class _DeskHomePageState extends State<DeskHomePage> {
   @override
   Widget build(BuildContext context) {
-    double size = MediaQuery.of(context).size.width;
+    double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Sizer(builder:(context, orientation, deviceType) {
       return Padding(
       padding: EdgeInsets.symmetric(vertical: height * 0.1),
-      child: Container(
+      child: SizedBox(
         height: height*0.7,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -111,12 +109,12 @@ class _DeskHomePageState extends State<DeskHomePage> {
                 ],
                 shape: BoxShape.circle,
               ),
-              height: size * 0.25,
-              width: size * 0.25,
+              height: height * 0.5,
+              width: width * 0.25,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: CircleAvatar(
-                  radius: size * 0.09,
+                  radius: width * 1,
                   backgroundImage:  const AssetImage("images/1.jpg"),
                 ),
               ),

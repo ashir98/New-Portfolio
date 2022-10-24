@@ -1,7 +1,6 @@
+// ignore_for_file: file_names, must_be_immutable
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -16,7 +15,7 @@ class CustomAppBar extends StatelessWidget {
     double size = MediaQuery.of(context).size.width;
     return AppBar(
       toolbarHeight: 100,
-      backgroundColor: Color(0xff052946),
+      backgroundColor: const Color(0xff052946),
       title: GradientText(
         'Ashir.',
         colors: const [
@@ -30,7 +29,7 @@ class CustomAppBar extends StatelessWidget {
       actions: [
         SizedBox(width: size*0.05,),
         TextButton(
-          onPressed:() =>itemScrollController.scrollTo(index: 0, duration: Duration(milliseconds: 500)),
+          onPressed:() =>itemScrollController.scrollTo(index: 0, duration: const Duration(milliseconds: 500)),
           child: GradientText(
             "Home",
             colors: const [
@@ -45,7 +44,7 @@ class CustomAppBar extends StatelessWidget {
         ),
         SizedBox(width: size*0.05,),
         TextButton(
-          onPressed:() =>itemScrollController.scrollTo(index: 1, duration: Duration(milliseconds: 500)),
+          onPressed:() =>itemScrollController.scrollTo(index: 1, duration: const Duration(milliseconds: 500)),
           child: GradientText(
             "About",
             colors: const [
@@ -61,7 +60,7 @@ class CustomAppBar extends StatelessWidget {
         SizedBox(width: size*0.05,),
         TextButton(
           onPressed:() =>itemScrollController.scrollTo(
-            index: 2, duration: Duration(milliseconds: 500),
+            index: 2, duration: const Duration(milliseconds: 500),
             ),
           child: GradientText(
             "Projects",

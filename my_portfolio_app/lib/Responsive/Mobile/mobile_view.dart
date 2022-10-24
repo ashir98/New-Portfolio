@@ -111,7 +111,7 @@ class _MobileViewState extends State<MobileView> {
                       children: [
                         SocialButtons(
                       icon: FontAwesomeIcons.facebook,
-                      color: Color(0xff3b5998),
+                      color: const Color(0xff3b5998),
                     ),
                     SocialButtons(
                       icon: FontAwesomeIcons.whatsapp,
@@ -119,7 +119,7 @@ class _MobileViewState extends State<MobileView> {
                     ),
                     SocialButtons(
                       icon: FontAwesomeIcons.linkedinIn,
-                      color: Color(0xff0072b1),
+                      color: const Color(0xff0072b1),
                     ),
                     SocialButtons(
                       icon: FontAwesomeIcons.youtube,

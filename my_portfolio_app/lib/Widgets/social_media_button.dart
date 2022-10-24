@@ -1,8 +1,12 @@
+// ignore: duplicate_ignore
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sizer/sizer.dart';
 
-// ignore: must_be_immutable
+
 class SocialButton extends StatelessWidget {
   IconData icon;
   Color color;

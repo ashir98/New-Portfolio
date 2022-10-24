@@ -1,19 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:my_portfolio_app/Responsive/Desktop/about.dart';
-import 'package:my_portfolio_app/Responsive/Desktop/footer.dart';
-import 'package:my_portfolio_app/Responsive/Desktop/home_page.dart';
-import 'package:my_portfolio_app/Responsive/Desktop/projects.dart';
+import 'package:my_portfolio_app/Responsive/Desktop/d_about.dart';
+import 'package:my_portfolio_app/Responsive/Desktop/d_footer.dart';
+import 'package:my_portfolio_app/Responsive/Desktop/d_homepage.dart';
+import 'package:my_portfolio_app/Responsive/Desktop/d_projects.dart';
 import 'package:my_portfolio_app/Widgets/appBar.dart';
-import 'package:my_portfolio_app/Widgets/buletted_text.dart';
-import 'package:my_portfolio_app/Widgets/desktop_top_bar.dart';
-import 'package:my_portfolio_app/Widgets/social_media_button.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
-import 'package:sizer/sizer.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+
 
 class DesktopView extends StatefulWidget {
   const DesktopView({super.key});
@@ -27,10 +21,10 @@ class _DesktopViewState extends State<DesktopView>
   late AnimationController _animationController;
 
   List pages = [
-    DeskHomePage(),    
-    About(),
-    Projects(),
-    Footer()
+    const DeskHomePage(),    
+    const About(),
+    const Projects(),
+    const Footer()
   ];
 
 

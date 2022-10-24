@@ -1,7 +1,8 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_portfolio_app/Widgets/desktop_top_bar.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:sizer/sizer.dart';
 import 'package:dev_icons/dev_icons.dart';
@@ -22,7 +23,7 @@ class _AboutState extends State<About> {
         "I am Syed Ashir Ali, App developer from Karachi, Pakistan. I have 1.5 year experience in Flutter mobile application development";
     return Sizer(
       builder: (context, orientation, deviceType) {
-        return Container(
+        return SizedBox(
           height: height*1,
           child: Column(
             children: [
@@ -52,7 +53,7 @@ class _AboutState extends State<About> {
                           width: size * 0.25,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xff041d31)),
+                              color: const Color(0xff041d31)),
                           child: Padding(
                             padding: EdgeInsets.symmetric(
                                 vertical: size * 0.02, horizontal: size * 0.01),
@@ -76,7 +77,7 @@ class _AboutState extends State<About> {
                           width: size * 0.25,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xff041d31)),
+                              color: const Color(0xff041d31)),
                           child: Padding(
                               padding: EdgeInsets.symmetric(
                                   vertical: size * 0.02, horizontal: size * 0.01),
@@ -105,7 +106,7 @@ class _AboutState extends State<About> {
                           width: size * 0.25,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xff041d31)),
+                              color: const Color(0xff041d31)),
                           child: Padding(
                               padding: EdgeInsets.symmetric(
                                   vertical: size * 0.02, horizontal: size * 0.01),
@@ -117,13 +118,13 @@ class _AboutState extends State<About> {
                                         MainAxisAlignment.spaceAround,
                                     children: [
                                       Skills(
-                                        icon: DevIcons.flutterPlain, color: Color(0xff2ab5f5), name: "Flutter",
+                                        icon: DevIcons.flutterPlain, color: const Color(0xff2ab5f5), name: "Flutter",
                                       ),
                                       Skills(
-                                        icon: DevIcons.dartPlain,color: Color(0xff04599c),name: "Dart",
+                                        icon: DevIcons.dartPlain,color: const Color(0xff04599c),name: "Dart",
                                       ),
                                       Skills(
-                                        icon: DevIcons.firebasePlain,color: Color(0xffffca2b),name: "Firebase",
+                                        icon: DevIcons.firebasePlain,color: const Color(0xffffca2b),name: "Firebase",
                                       ),
                                     ],
                                   ),
@@ -132,13 +133,13 @@ class _AboutState extends State<About> {
                                         MainAxisAlignment.spaceAround,
                                     children: [
                                       Skills(
-                                        icon: DevIcons.html5Plain,color: Color(0xffec5923), name: "Html 5",
+                                        icon: DevIcons.html5Plain,color: const Color(0xffec5923), name: "Html 5",
                                       ),
                                       Skills(
-                                        icon: DevIcons.css3Plain,color: Color(0xff264ee4),name: "CSS",
+                                        icon: DevIcons.css3Plain,color: const Color(0xff264ee4),name: "CSS",
                                       ),
                                       Skills(
-                                        icon: DevIcons.cplusplusPlain,color: Color(0xff014284),name: "C++",
+                                        icon: DevIcons.cplusplusPlain,color: const Color(0xff014284),name: "C++",
                                       ),
                                     ],
                                   ),
@@ -170,7 +171,7 @@ class Information extends StatelessWidget {
       children: [
         GradientText(
           field,
-          colors: [
+          colors: const [
             Color(0xff2Ac9d7),
             Color(0xffD247f7),
           ],
@@ -198,7 +199,7 @@ class Skills extends StatelessWidget {
         Container(
             height: height * 0.08,
             width: size * 0.05,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
@@ -219,7 +220,7 @@ class Skills extends StatelessWidget {
               color: color,
               size: size * 0.02,
             )),
-            SizedBox(height: 5,),
+            const SizedBox(height: 5,),
             Text(name)
       ],
     );
