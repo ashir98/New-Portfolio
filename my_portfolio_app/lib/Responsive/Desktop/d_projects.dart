@@ -24,6 +24,7 @@ class _ProjectsState extends State<Projects> {
     double height = MediaQuery.of(context).size.height;
     return SizedBox(
       height: height*1,
+      width: width*2,
       child: Column(
         children: [
           Text(
@@ -42,7 +43,7 @@ class _ProjectsState extends State<Projects> {
             width: width*1,
             
             child: Padding(
-              padding:  EdgeInsets.all(8.0),
+              padding:  const EdgeInsets.all(8.0),
               child: CarouselSlider(
                 items: [
 
@@ -92,7 +93,7 @@ class _CarouselItemsState extends State<CarouselItems> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Padding(
-                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
@@ -142,7 +143,7 @@ class _CarouselItemsState extends State<CarouselItems> {
                                     width: width*0.1,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(50),
-                                      gradient: LinearGradient(
+                                      gradient: const LinearGradient(
                                         colors: [
                                           Color(0xff2Ac9d7),Color(0xffD247f7),
                                         ],

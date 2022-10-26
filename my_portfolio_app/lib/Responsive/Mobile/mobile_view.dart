@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_portfolio_app/Responsive/Mobile/m_about.dart';
+import 'package:my_portfolio_app/Responsive/Mobile/m_homepage.dart';
 import 'package:my_portfolio_app/Widgets/buletted_text.dart';
 import 'package:my_portfolio_app/Widgets/social_media_button.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:sizer/sizer.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
@@ -14,6 +17,13 @@ class MobileView extends StatefulWidget {
 }
 
 class _MobileViewState extends State<MobileView> {
+  final ItemScrollController itemScrollController = ItemScrollController();
+
+  List pages = [
+    MobileHomePage(),
+    MobileAbout()
+    
+  ];
   @override
   Widget build(BuildContext context) {
     return Sizer(
@@ -25,119 +35,29 @@ class _MobileViewState extends State<MobileView> {
 
               ///APP BAR
               appBar: AppBar(
+                toolbarHeight: 10.h,
                 title: GradientText(
                   "Ashir.",
                   colors: const [
                     Color(0xff2Ac9d7),
                     Color(0xffD247f7),
                   ],
-                  style: GoogleFonts.lato(fontSize: 4.h, fontWeight: FontWeight.bold),
+                  style: GoogleFonts.lato(fontSize:30, fontWeight: FontWeight.bold),
                 ),
                 elevation: 0,
                 backgroundColor:const Color(0xff052946) ,
               ),
+              endDrawer: Drawer(
+                backgroundColor: Color(0xff052946),
+              ),
 
               ///BODY
-              body: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    SizedBox(
-                      height: 3.h,
-                    ),
-
-                    Center(
-                      child: Container(
-                        
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Color(0xff2Ac9d7),
-                              blurRadius: 10,
-                              spreadRadius: 4,
-                              offset: Offset(-6, -1)
-                            ),
-                            BoxShadow(
-                              color: Color(0xffD247f7),
-                              blurRadius: 10,
-                              spreadRadius: 4,
-                              offset: Offset(6,1)
-                            )
-                          ]
-                        ),
-                        child: CircleAvatar(
-                          radius: 10.h,
-                          backgroundImage: const AssetImage("images/1.jpg", ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(vertical: 4.h, horizontal: 2.h),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          
-                          Text("Hi, my name is",style: GoogleFonts.lato(
-                            fontSize: 3.h,
-                            color: Colors.white
-                          ),),
-                          SizedBox(height: 1.h,),
-                          GradientText(
-                            "Syed Ashir Ali",
-                            colors: const [
-                              Color(0xff2Ac9d7),
-                              Color(0xffD247f7),
-                            ],
-                            style: GoogleFonts.lato(fontSize: 6.5.h, fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(height:1.h),
-                          Text("I build things for App and Web.", style: GoogleFonts.lato(fontSize: 3.h, fontWeight: FontWeight.bold, color: Colors.white),)
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 2.h,),
-                    BulletText(text: "App developer",),
-                    BulletText(text: "Flutter Enthusiast"),
-                    BulletText(text: "Computer Science Student"),
-
-                    SizedBox(
-                      height: 4.h,
-                    ),
-
-
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SocialButtons(
-                      icon: FontAwesomeIcons.facebook,
-                      color: const Color(0xff3b5998),
-                    ),
-                    SocialButtons(
-                      icon: FontAwesomeIcons.whatsapp,
-                      color: const Color(0xff25D366),
-                    ),
-                    SocialButtons(
-                      icon: FontAwesomeIcons.linkedinIn,
-                      color: const Color(0xff0072b1),
-                    ),
-                    SocialButtons(
-                      icon: FontAwesomeIcons.youtube,
-                      color: Colors.red,
-                    ), 
-                    SocialButtons(
-                      icon: FontAwesomeIcons.github,
-                      color: Colors.black,
-                    )
-                      ],
-                    ),
-
-
-                    
-
-                  ],
-                ),
-              ),
+              body: ScrollablePositionedList.builder(
+                itemScrollController: itemScrollController,
+                shrinkWrap: true,
+                itemCount: pages.length,
+                itemBuilder: (context, index) => pages[index],
+              )
             ));
       },
     );

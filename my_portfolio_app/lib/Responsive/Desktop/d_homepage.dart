@@ -23,6 +23,7 @@ class _DeskHomePageState extends State<DeskHomePage> {
       padding: EdgeInsets.symmetric(vertical: height * 0.1),
       child: SizedBox(
         height: height*0.7,
+        width: double.infinity,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -93,31 +94,38 @@ class _DeskHomePageState extends State<DeskHomePage> {
             ),
       
             ///CIRCULAR AVATAR PICTURE
-            Container(
-              decoration: const BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                      color: Color(0xffD247f7),
-                      spreadRadius: 1,
-                      blurRadius: 10,
-                      offset: Offset(10, 0)),
-                  BoxShadow(
-                      color: Color(0xff2Ac9d7),
-                      spreadRadius: 1,
-                      blurRadius: 10,
-                      offset: Offset(-10, 0)),
-                ],
-                shape: BoxShape.circle,
-              ),
-              height: height * 0.5,
-              width: width * 0.25,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CircleAvatar(
-                  radius: width * 1,
-                  backgroundImage:  const AssetImage("images/1.jpg"),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  decoration: const BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                          color: Color(0xffD247f7),
+                          spreadRadius: 1,
+                          blurRadius: 10,
+                          offset: Offset(10, 0)),
+                      BoxShadow(
+                          color: Color(0xff2Ac9d7),
+                          spreadRadius: 1,
+                          blurRadius: 10,
+                          offset: Offset(-10, 0)),
+                    ],
+                    shape: BoxShape.circle,
+                  ),
+                  height: height * 0.5,
+                  width: width * 0.25,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Center(
+                      child: CircleAvatar(
+                        radius: width * 1,
+                        backgroundImage:  const AssetImage("images/1.jpg"),
+                      ),
+                    ),
+                  ),
                 ),
-              ),
+              ],
             )
           ],
         ),

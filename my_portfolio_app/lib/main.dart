@@ -1,9 +1,17 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:my_portfolio_app/home.dart';
+import 'package:flutter/services.dart';
+import 'package:my_portfolio_app/Responsive/Desktop/desktop_view.dart';
+import 'package:my_portfolio_app/Responsive/Mobile/mobile_view.dart';
+import 'package:my_portfolio_app/Responsive/responsive_layout.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown
+  ]);
   runApp(MyPortfolioApp());
 }
 
@@ -19,7 +27,8 @@ class _MyPortfolioAppState extends State<MyPortfolioApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home:  RespnsiveLayout(desktopView: DesktopView(), mobileView: MobileView()),
+
     );
   }
 }

@@ -25,6 +25,7 @@ class _AboutState extends State<About> {
       builder: (context, orientation, deviceType) {
         return SizedBox(
           height: height*1,
+          width: double.infinity,
           child: Column(
             children: [
               Text(
@@ -60,6 +61,8 @@ class _AboutState extends State<About> {
                             child: Text(
                               paragraph,
                               style: GoogleFonts.aBeeZee(fontSize: size * 0.015),
+                              textAlign: TextAlign.justify,
+                              
                             ),
                           ),
                         )

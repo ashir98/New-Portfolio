@@ -44,17 +44,19 @@ class SocialButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Container(
-      height: 6.h,
-      width: 6.h,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: color
-      ),
-      child: IconButton(
-        onPressed: (){},
-        icon: Icon(icon, color: Colors.white, size: 3.5.h,),
-      ),
-    );
+                    height: height*0.2,
+                    width: width*0.145,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: color
+                    ),
+                    child: Center(
+                      child: Icon(icon, size: width*0.08,color: Colors.white,),
+                    ),
+                    
+                  );
   }
 }
