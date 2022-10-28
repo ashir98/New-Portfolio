@@ -8,16 +8,16 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:hovering/hovering.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:url_launcher/url_launcher.dart';
-class Projects extends StatefulWidget {
-  const Projects({super.key});
+class DeskProjects extends StatefulWidget {
+  const DeskProjects({super.key});
 
   @override
-  State<Projects> createState() => _ProjectsState();
+  State<DeskProjects> createState() => _DeskProjectsState();
 }
 
 
 
-class _ProjectsState extends State<Projects> {
+class _DeskProjectsState extends State<DeskProjects> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;

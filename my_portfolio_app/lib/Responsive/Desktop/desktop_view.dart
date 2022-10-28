@@ -22,8 +22,8 @@ class _DesktopViewState extends State<DesktopView>
 
   List pages = [
     const DeskHomePage(),    
-    const About(),
-    const Projects(),
+    const DeskAbout(),
+    const DeskProjects(),
     const Footer()
   ];
 

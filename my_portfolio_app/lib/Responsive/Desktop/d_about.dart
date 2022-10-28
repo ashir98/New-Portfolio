@@ -7,14 +7,14 @@ import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:sizer/sizer.dart';
 import 'package:dev_icons/dev_icons.dart';
 
-class About extends StatefulWidget {
-  const About({super.key});
+class DeskAbout extends StatefulWidget {
+  const DeskAbout({super.key});
 
   @override
-  State<About> createState() => _AboutState();
+  State<DeskAbout> createState() => _DeskAboutState();
 }
 
-class _AboutState extends State<About> {
+class _DeskAboutState extends State<DeskAbout> {
   @override
   Widget build(BuildContext context) {
     double size = MediaQuery.of(context).size.width;

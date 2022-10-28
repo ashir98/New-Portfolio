@@ -47,7 +47,7 @@ class _MobileAboutState extends State<MobileAbout> {
           padding: EdgeInsets.symmetric(horizontal:10),
           child: Container(
             width: double.infinity,
-            height: height*0.5,
+
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Color(0xff041d31),
@@ -61,7 +61,7 @@ class _MobileAboutState extends State<MobileAbout> {
                   InformationText(field: "From: ",info: "Karachi, Pakistan",size: width*0.075,),
                   InformationText(field: "Qualification: ",info: "BSCS",size: width*0.07,),
                   InformationText(field: "Email: ",info: "syedashir07@gmail.com",size: width*0.063,),
-                  InformationText(field: "Phone: ",info: "03353226549",size: width*0.07,),
+                  InformationText(field: "Phone: ",info: "+923353226549",size: width*0.07,),
                 ],
               )
             ),
@@ -82,7 +82,7 @@ class _MobileAboutState extends State<MobileAbout> {
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.start,
+
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -92,6 +92,8 @@ class _MobileAboutState extends State<MobileAbout> {
                       Skill(icon: DevIcons.firebasePlain,color: const Color(0xffffca2b),name: "Firebase",)
                     ],
                   ),
+                  SizedBox(height: height*0.05,),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -121,23 +123,26 @@ class InformationText extends StatelessWidget {
   Widget build(BuildContext context) {
         double width = MediaQuery.of(context).size.width;
     
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-                    
-                    children: [
-                      GradientText(
-                        field,
-                        colors: [Color(0xff2Ac9d7),Color(0xffD247f7)],
-                        style: GoogleFonts.lato(fontSize: width*0.075, fontWeight: FontWeight.bold),
-                      ),
-                      Expanded(
-                        child: Text(
-                          info,
-                          style: GoogleFonts.lato(fontSize: size, color: Colors.white),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+                      
+                      children: [
+                        GradientText(
+                          field,
+                          colors: [Color(0xff2Ac9d7),Color(0xffD247f7)],
+                          style: GoogleFonts.lato(fontSize: width*0.075, fontWeight: FontWeight.bold),
                         ),
-                      )
-                    ],
-                  );
+                        Expanded(
+                          child: Text(
+                            info,
+                            style: GoogleFonts.lato(fontSize: size, color: Colors.white),
+                          ),
+                        )
+                      ],
+                    ),
+    );
   }
 }
 
@@ -151,13 +156,14 @@ class Skill extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double size = MediaQuery.of(context).size.width;
+    double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Container(
-            height: height * 0.15,
-            width: size * 0.15,
+            height: height*0.1,
+            width: width * 0.15,
             decoration: const BoxDecoration(
               color: Colors.white,
               boxShadow: [
@@ -177,8 +183,10 @@ class Skill extends StatelessWidget {
             child: Icon(
               icon,
               color: color,
-              size: size * 0.08,
-            )),
+              size: width * 0.09,
+            )
+          ),
+          Text(name, style:GoogleFonts.lato( color: Colors.white,fontSize: width*0.04, fontWeight: FontWeight.bold))
 
       ],
     );
