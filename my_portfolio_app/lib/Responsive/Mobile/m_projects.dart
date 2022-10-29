@@ -23,7 +23,7 @@ class _MobileProjectsState extends State<MobileProjects> {
     return Column(
       children: [
         SizedBox(height: height*0.05,),
-        Text("PROJECT SHOWCASE", style: GoogleFonts.lato(color: Colors.white, fontSize:30),),
+        Text("PROJECTS SHOWCASE", style: GoogleFonts.lato(color: Colors.white, fontSize:30, fontWeight: FontWeight.bold),),
         SizedBox(height: height*0.02,),
         
         CarouselSlider(
@@ -37,7 +37,7 @@ class _MobileProjectsState extends State<MobileProjects> {
             CarouselItem(
               name: "Ecommerce App",
               image1: "images/mobile/ec1.jpg",
-              image2: "images/mobile/ec3.jpg",
+              image2: "images/mobile/ec2.jpg",
               image3: "images/mobile/ec3.jpg",
             ),
             CarouselItem(
@@ -82,8 +82,12 @@ class CarouselItem extends StatefulWidget {
 }
 
 class _CarouselItemState extends State<CarouselItem> {
+  
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height =MediaQuery.of(context).size.height;
+    bool ontap = true;
     return Padding(
               padding: const EdgeInsets.all(25),
               child: Container(
@@ -147,7 +151,7 @@ class _CarouselItemState extends State<CarouselItem> {
                           child: GradientText(
                             widget.name,
                             colors: [Color(0xff2Ac9d7),Color(0xffD247f7)],
-                            style: GoogleFonts.lato(fontSize: 25, fontWeight: FontWeight.bold),
+                            style: GoogleFonts.lato(fontSize: width*0.055, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),

@@ -61,32 +61,46 @@ class _MobileViewState extends State<MobileView> {
                         shrinkWrap: true,
                         children: [
                           ListTile(
-                            trailing: GradientText(
-                              "Home",
-                              colors: [
-                                Color(0xff2Ac9d7), Color(0xffD247f7),
-                              ],
-                              style: GoogleFonts.lato(fontSize: 30),
+                            leading: GestureDetector(
+                              onTap:() => itemScrollController.scrollTo(index: 0, duration: Duration(seconds: 1)),
+                              child: GradientText(
+                                "Home",
+                                colors: [
+                                  Color(0xff2Ac9d7), Color(0xffD247f7),
+                                ],
+                                style: GoogleFonts.lato(fontSize: 30),
+                              ),
                             ),
                           ),
                            ListTile(
-                            trailing: GradientText(
-                              "About",
-                              colors: [
-                                Color(0xff2Ac9d7), Color(0xffD247f7),
-                              ],
-                              style: GoogleFonts.lato(fontSize: 30),
+                            leading: GestureDetector(
+                              onTap:(){
+                                itemScrollController.jumpTo(index: 1, );
+
+                              },
+                              child: GradientText(
+                                "About",
+                                colors: [
+                                  Color(0xff2Ac9d7), Color(0xffD247f7),
+                                ],
+                                style: GoogleFonts.lato(fontSize: 30),
+                              ),
                             ),
                           ),
-                           ListTile(
-                            trailing: GradientText(
-                              "Projects",
-                              colors: [
-                                Color(0xff2Ac9d7), Color(0xffD247f7),
-                              ],
-                              style: GoogleFonts.lato(fontSize: 30),
-                            ),
-                          ),
+                           GestureDetector(
+                            onTap: () => itemScrollController.scrollTo(index: 2, duration: Duration(seconds: 1)),
+                             child: ListTile(
+                              leading: GradientText(
+                                "Projects",
+                                colors: [
+                                  Color(0xff2Ac9d7), Color(0xffD247f7),
+                                ],
+                                style: GoogleFonts.lato(fontSize: 30),
+                              ),
+                                                     ),
+                           ),
+
+                          
 
                           
                            

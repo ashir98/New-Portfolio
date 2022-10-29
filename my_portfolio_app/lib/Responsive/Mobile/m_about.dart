@@ -23,7 +23,7 @@ class _MobileAboutState extends State<MobileAbout> {
         "I am Syed Ashir Ali, App developer from Karachi, Pakistan. I have 1.5 year experience in Flutter mobile application development";
     return Column(
       children: [
-        Text("ABOUT ME", style: GoogleFonts.lato(color: Colors.white, fontSize:30),),
+        Text("ABOUT ME", style: GoogleFonts.lato(color: Colors.white, fontSize:30, fontWeight: FontWeight.bold),),
         SizedBox(height: height*0.02,),
         Padding(
           padding: EdgeInsets.symmetric(horizontal:10),
@@ -41,7 +41,7 @@ class _MobileAboutState extends State<MobileAbout> {
           ),
         ),
         SizedBox(height: height*0.05,),
-        Text("INFORMATION", style: GoogleFonts.lato(color: Colors.white, fontSize:30),),
+        Text("INFORMATION", style: GoogleFonts.lato(color: Colors.white, fontSize:30, fontWeight: FontWeight.bold)),
         SizedBox(height: height*0.02,),
         Padding(
           padding: EdgeInsets.symmetric(horizontal:10),
@@ -68,7 +68,7 @@ class _MobileAboutState extends State<MobileAbout> {
           ),
         ),
         SizedBox(height: height*0.05,),
-        Text("SKILLS", style: GoogleFonts.lato(color: Colors.white, fontSize:30),),
+        Text("SKILLS", style: GoogleFonts.lato(color: Colors.white, fontSize:30, fontWeight: FontWeight.bold)),
         SizedBox(height: height*0.02,),
         Padding(
           padding: EdgeInsets.symmetric(horizontal:10),
